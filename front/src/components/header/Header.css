@@ -1,0 +1,7 @@
+.master-div {
+  display: flex;
+  justify-content: space-between;
+}
+.title-and-img {
+  display: flex;
+}
