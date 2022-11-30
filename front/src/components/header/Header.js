@@ -1,5 +1,11 @@
 import React from "react";
 import Search from "../search/Search";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Header.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
@@ -10,20 +16,22 @@ const Header = () => {
   });
 
   return (
-    <div className="master-div">
-      <div className="title-and-img">
-        <div>img</div>
-        <div>Pc</div>
-        <div>Parts</div>
+    <div>
+      <div className="master-div">
+        {view1 ? <div>Burger</div> : ""}
+        <div className="title-and-img">
+          <div>img</div>
+          <div>Pc</div>
+          <div>Parts</div>
+        </div>
+        <div>{!view1 ? <Search view={view1} /> : ""}</div>
+        <div className="account-cart-comitment">
+          <div className="details">Comintments</div>
+          <div className="details">My account</div>
+          <div className="details">My Cart</div>
+        </div>
       </div>
-      <div>
-        {!view1 ? <Search view={view1} /> : <Link to={"/searchPage"}>lol</Link>}
-      </div>
-      <div>
-        <div>Comintments</div>
-        <div>My account</div>
-        <div>My Cart</div>
-      </div>
+      <div>{view1 ? <Search view={view1} /> : ""}</div>
     </div>
   );
 };
