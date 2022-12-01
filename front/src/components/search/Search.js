@@ -13,7 +13,7 @@ const Search = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <input
-        className={view1 ? "burger" : ""}
+        className={view1 ? "search-input" : ""}
         type="text"
         onChange={(e) => {
           setQuery(e.target.value);

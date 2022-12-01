@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "../search/Search";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -11,6 +11,7 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [show, setShow] = useState(false);
   const view1 = useMediaQuery({
     query: "(max-width:800px)",
   });
@@ -18,7 +19,13 @@ const Header = () => {
   return (
     <div>
       <div className="master-div">
-        {view1 ? <div>Burger</div> : ""}
+        {view1 ? (
+          <div className="burger" onClick={() => setShow(!show)}>
+            Burger
+          </div>
+        ) : (
+          ""
+        )}
         <div className="title-and-img">
           <div>img</div>
           <div>Pc</div>
@@ -32,6 +39,16 @@ const Header = () => {
         </div>
       </div>
       <div>{view1 ? <Search view={view1} /> : ""}</div>
+      <div className="toggle-all-cat" onClick={() => setShow(!show)}>
+        {!view1 ? <p>Todas las categorias</p> : ""}
+      </div>
+      {show ? (
+        <div className="blur">
+          <div className="all-category">lol</div>{" "}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
