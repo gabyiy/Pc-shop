@@ -9,6 +9,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Header.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -21,15 +22,21 @@ const Header = () => {
       <div className="master-div">
         {view1 ? (
           <div className="burger" onClick={() => setShow(!show)}>
-            Burger
+            <MenuIcon />
           </div>
         ) : (
           ""
         )}
         <div className="title-and-img">
-          <div>img</div>
-          <div>Pc</div>
-          <div>Parts</div>
+          <img
+            className="logo-img"
+            src="https://www.shutterstock.com/image-photo/computer-hardware-configuration-laid-out-600w-1915366039.jpg"
+            alt="logo"
+          />
+          <div>
+            <div className="pc">Pc</div>
+            <div className="parts">Parts</div>
+          </div>
         </div>
         <div>{!view1 ? <Search view={view1} /> : ""}</div>
         <div className="account-cart-comitment">
@@ -40,11 +47,20 @@ const Header = () => {
       </div>
       <div>{view1 ? <Search view={view1} /> : ""}</div>
       <div className="toggle-all-cat" onClick={() => setShow(!show)}>
-        {!view1 ? <p>Todas las categorias</p> : ""}
+        {!view1 ? (
+          <div className="all-category">
+            {" "}
+            <MenuIcon />
+            <p>Todas las categorias</p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       {show ? (
         <div className="blur">
-          <div className="all-category">lol</div>{" "}
+          <div className="first-cat">lol</div>{" "}
+          <div className="second-cat">gg</div>{" "}
         </div>
       ) : (
         ""
