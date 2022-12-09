@@ -10,6 +10,7 @@ import "./Header.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import Badge from "react-bootstrap/Badge";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -42,7 +43,9 @@ const Header = () => {
         <div className="account-cart-comitment">
           <div className="details">Comintments</div>
           <div className="details">My account</div>
-          <div className="details">My Cart</div>
+          <div className="details">
+            My Cart <Badge bg="danger">9</Badge>
+          </div>
         </div>
       </div>
       <div>{view1 ? <Search view={view1} /> : ""}</div>
