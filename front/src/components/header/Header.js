@@ -11,6 +11,7 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "react-bootstrap/Badge";
+import data from "../data";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -18,6 +19,17 @@ const Header = () => {
     query: "(max-width:800px)",
   });
 
+  const [components, setComponents] = useState(false);
+  const [ordenadores, setOrdenadores] = useState(false);
+
+  const compoentActivator = () => {
+    setComponents(true);
+    setOrdenadores(false);
+  };
+  const ordenadoresActivator = () => {
+    setComponents(false);
+    setOrdenadores(true);
+  };
   return (
     <div>
       <div className="master-div">
@@ -62,8 +74,28 @@ const Header = () => {
       </div>
       {show ? (
         <div className="blur">
-          <div className="first-cat">lol</div>{" "}
-          <div className="second-cat">gg</div>{" "}
+          <div className="first-cat">
+            <div onClick={() => compoentActivator()}>
+              <p>Componentes</p>
+            </div>
+            <div onClick={() => ordenadoresActivator()}>Ordenadores</div>
+          </div>{" "}
+          <div className="second-cat">
+            {components ? (
+              <div>
+                <p>Torres/Cajas/Carcasas</p>
+              </div>
+            ) : (
+              ""
+            )}
+            {ordenadores ? (
+              <div>
+                <p>Ordenadores</p>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>{" "}
         </div>
       ) : (
         ""
