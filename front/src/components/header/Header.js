@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Header.css";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "react-bootstrap/Badge";
 import data from "../data";
@@ -18,6 +18,10 @@ const Header = () => {
   const view1 = useMediaQuery({
     query: "(max-width:800px)",
   });
+
+  let slug;
+  data.components.pcTowers.map((tower) => (slug = tower.slug));
+  console.log(slug);
 
   const [components, setComponents] = useState(false);
   const [ordenadores, setOrdenadores] = useState(false);
@@ -82,9 +86,11 @@ const Header = () => {
           </div>{" "}
           <div className="second-cat">
             {components ? (
-              <div>
-                <p>Torres/Cajas/Carcasas</p>
-              </div>
+              <Link to={`/product/${tower.slug}`}>
+                <div>
+                  <p>Torres/Cajas/Carcasas</p>
+                </div>
+              </Link>
             ) : (
               ""
             )}

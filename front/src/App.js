@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import SearchPage from "./pages/searchPage/SearchPage";
+import ProductScreen from "./pages/productScreen/ProductScreen";
 function App() {
   return (
     <BrowserRouter>
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/searchPage" element={<SearchPage />} />
+          <Route path="/product/:slug" element={<ProductScreen />} />
         </Routes>
       </div>
     </BrowserRouter>
