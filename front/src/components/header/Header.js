@@ -19,10 +19,6 @@ const Header = () => {
     query: "(max-width:800px)",
   });
 
-  let slug;
-  data.components.pcTowers.map((tower) => (slug = tower.slug));
-  console.log(slug);
-
   const [components, setComponents] = useState(false);
   const [ordenadores, setOrdenadores] = useState(false);
 
@@ -34,6 +30,8 @@ const Header = () => {
     setComponents(false);
     setOrdenadores(true);
   };
+  console.log(data.components);
+
   return (
     <div>
       <div className="master-div">
@@ -86,11 +84,11 @@ const Header = () => {
           </div>{" "}
           <div className="second-cat">
             {components ? (
-              <Link to={`/product/${tower.slug}`}>
-                <div>
-                  <p>Torres/Cajas/Carcasas</p>
-                </div>
-              </Link>
+              <div>
+                {data.components.map((comp) => (
+                  <p>{comp.slug}</p>
+                ))}
+              </div>
             ) : (
               ""
             )}

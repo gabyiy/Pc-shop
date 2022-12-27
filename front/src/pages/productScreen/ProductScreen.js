@@ -3,8 +3,18 @@ import { useParams } from "react-router-dom";
 const ProductScreen = () => {
   const params = useParams();
 
-  const { slug } = params;
-  return <div>{slug}</div>;
+  const { pcTowers } = params;
+
+  const towers = Object.values(pcTowers);
+
+  console.log(towers);
+  return (
+    <div>
+      {towers.map((name) => (
+        <h1>{name}</h1>
+      ))}
+    </div>
+  );
 };
 
 export default ProductScreen;
