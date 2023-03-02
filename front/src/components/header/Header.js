@@ -38,38 +38,15 @@ const [{loading, error,products},dispatch]=useReducer(reducer,{
     try{ 
       const result = await axios.get("/api/products");
       dispatch({type:"FETCH_SUCCESS",payload:result.data })
-      setUnique(  [...new Set(products.products.map(item => item.category))])
-      //console.log(unique)
+    
     }catch(err){dispatch({type:"FETCH_FAIL" ,payload:error.message})}
     }
     fetchData();  
   }, [unique]);
 
 
-  const array = [
-    { id: 1, name: "john" },
-    { id: 1, name: "jack" },
-    { id: 2, name: "mony" },
-    { id: 2, name: "tony" },
-    { id: 3, name: "jac" },
-    { id: 4, name: "noman" },
-    { id: 4, name: "tom" },
-    { id: 5, name: "tommy" },
-    { id: 6, name: "jick" },
-    { id: 6, name: "moni" },
-  ];
+ 
   
-  
-  const res = array.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item.id === current.id);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
-  
-  
-  console.log("result :-> ", res);
   
   const [show, setShow] = useState(false);
   const view1 = useMediaQuery({
@@ -87,38 +64,14 @@ const [{loading, error,products},dispatch]=useReducer(reducer,{
     setComponents(false);
     setOrdenadores(true);
   };
-  //set//UniqueProducts(products.pr)
-//const diferent = [...new Set(products.products.map(q => q.category))];
-//const categories = products.products.map(x => x.category);
-//c/onst uniqueCategories = [...new Set(categories)]; 
-//console.log(uniqueCategories)
-// const filterProducts = products.filter(product=>
-//   product.category==="Ram")
+ 
 
-let list = [1,1,3,4,3,5]
-const noDup=[...new Set(list)]
 
-const arr = [
-  {label: 'All', value: 'All'},
-  {label: 'All', value: 'All'},
-  {label: 'Alex', value: 'Ninja'},
-  {label: 'Bill', value: 'Op'},
-  {label: 'Cill', value: 'iopop'}
-]
-
-var result = arr.reduce((unique, o) => {
-  if(!unique.some(obj => obj.label === o.label && obj.value === o.value)) {
-    unique.push(o);
-  }
-  return unique;
-},[]);
-console.log(result);
 useEffect(()=>{
- //setUniqueProducts (Array.from( products.products.reduce((map,obj)=>map.set(obj.category,obj),new Map().values())))
+ setUniqueProducts (products.products)
 
 },[loading])
 
-  console.log( uniqueProducts)
   return (
     <div>
       <div className="master-div">

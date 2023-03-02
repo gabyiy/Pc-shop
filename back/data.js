@@ -15,7 +15,8 @@ const data = {
             
     },
     {
-      slug: "Torres",
+      category:"Torres",
+      slug: "ll",
       types: [
         {
           name: "Tempest",
@@ -79,7 +80,7 @@ const data = {
         {
           name: "Tempest",
           slug: "Tempest Work Torre ATX Negra",
-          categories: "pcTowers",
+          category: "Torres",
           price: 60,
           countInStock: 5,
           rating: 4.5,
