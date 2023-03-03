@@ -2,142 +2,97 @@ const data = {
   products: [
     {
       category:"Ram",
-      slug: "Memoria-typer",
-          name: "Typer",
-          band: "16 g",
+      name :"Corsair Vengeance LPX DDR4 3200 PC4-25600 16GB 2X8GB CL16 Negro",
+      slug: "Corsair-Vengeance-LPX DDR4-3200-PC4-25600-16GB-2X8GB-CL16-Negro",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
+          price:"50",
+          countInStock:20,
+          brand: "Corsair",
+          rating:4.5,
+          numReviews:10,
+          description:"La memoria Corsair Vengeance LPX se ha diseñado para overclocking de alto rendimiento. El disipador de calor, fabricado en aluminio puro, permite una disipación térmica más rápida, la placa impresa de ocho capas administra el calor y proporciona una capacidad superior para incrementar el overclocking",
             
     },
     {
       category:"Ram",
-      slug: "Memoria",
-          name: "alt",
-          band: "16 g",
+      name :"Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
+      slug: "Corsair-Vengeance-LPX-DDR4-3200MHz-PC4-25600-32GB-2x16GB-CL16",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
+          price:"90",
+          countInStock:10,
+          brand: "Corsair",
+          rating:5,
+          numReviews:5,
+          description:"La memoria VENGEANCE LPX está diseñada para overclocking de alto rendimiento. El disipador térmico está hecho de aluminio puro para una disipación de calor más rápida, y el PCB de ocho capas ayuda a controlar el calor y proporciona un margen superior de overclocking superior.",
             
     },
     {
-      category:"Torres",
-      slug: "ll",
-      types: [
-        {
-          name: "Tempest",
-          slug: "Tempest Work Torre ATX Negra",
-          categories: "pcTowers",
-          price: 60,
-          countInStock: 5,
-          rating: 4.5,
-          numReviews: 30,
-
-          images: [
-            "//thumb.pccomponentes.com/w-530-530/articles/59/593755/1978-tempest-work-cristal-templado-usb-30-negra.jpg",
-          ],
-          description:
-            "Tempest presenta su nueva torre Work, una torre hecha para revolucionar el mercado actual de PC. Una torre de diseño muy cuidado con las mejores conexiones para todos aquellos que quieran una torre de calidad y especificaciones a la última, al mejor precio posible.",
-          specifics: {
-            model: "Tempest Work Pc Case",
-            dimensions: "330mm x 210mm x 438mm",
-            weight: "3.7kg",
-            leftPanel: "Cristal templado",
-            ventLocation: [
-              "Frontal: 3x 120mm (opcional)",
-              "Superior: 2x 120mm (opcional)",
-              "Trasero: 1x 120mm (incluido)",
-            ],
-            watherCooler: [
-              "Trasera: 120mm (Opcional)",
-              "Frontal: 240mm (Opcional)",
-            ],
-            discsSlots: ["3.5'' HDD  x 2", "2.5'' SSD x 2"],
-            expension: "x7",
-            motherBoardType: "ATX, MicroATX, ITX",
-            source: [
-              "Fuente 500W (incluida)",
-
-              "Conector ATX 20/24-pin x1 ",
-              "Conector 4-pin CPU x1",
-              "  Conector IDE x2 ",
-              " Conector SATA  x3",
-              " Cable Alimentación: 1.2m ",
-            ],
-            cpuRefriger: "165mm máx.",
-            graphicCard: "320mm máx",
-          },
-
-          caracteristics: [
-            {
-              firstCharacteristic: "Diseño limpio y cuidado. ",
-              firstCaracteristicInfo:
-                "empest Work llama la atención visualmente, por su diseño limpio y estética cuidada. Una torre para dar estilo y transmitir profesionalidad en tu entorno de trabajo, o donde la vayas a utilizar. Su lateral transparente de metacrilato y el borde superior del frontal redondeado, hacen de esta torre un modelo con personalidad. ",
-              secondCaracteristic: "Conexiones sencillas.",
-              secondCaracteristicInfo:
-                "Conecta todos tus periféricos de manera sencilla y rápida, gracias a las conexiones disponibles en la parte frontal de su panel superior. Work dispone de dos puertos 2.0, un puerto 3.0 y sonido HD, todas las necesarias para conectar los periféricos más utilizados.",
-              thirdCaracteristic: "Ventilación optimizada. ",
-              thirdCaracteristicInfo:
-                "Esta torre cuenta con un ventilador trasero preinstalado pero, puedes incluir hasta 5 más, en su frontal y panel superior y, también acepta refrigeraciones líquidas. A su vez, gracias a las rejillas tanto superiores como laterales, la torre mantendrá una temperatura estable, evitando sobrecalentamientos, permitiendo  un rendimiento perfecto para hacer todo aquello que te propongas. ",
-              forthCaracteristic: "",
-            },
-          ],
-        },
-        {
-          name: "Tempest",
-          slug: "Tempest Work Torre ATX Negra",
-          category: "Torres",
-          price: 60,
-          countInStock: 5,
-          rating: 4.5,
-          numReviews: 30,
-
-          images: [
-            "//thumb.pccomponentes.com/w-530-530/articles/59/593755/1978-tempest-work-cristal-templado-usb-30-negra.jpg",
-          ],
-          description:
-            "Tempest presenta su nueva torre Work, una torre hecha para revolucionar el mercado actual de PC. Una torre de diseño muy cuidado con las mejores conexiones para todos aquellos que quieran una torre de calidad y especificaciones a la última, al mejor precio posible.",
-          specifics: {
-            model: "Tempest Work Pc Case",
-            dimensions: "330mm x 210mm x 438mm",
-            weight: "3.7kg",
-            leftPanel: "Cristal templado",
-            ventLocation: [
-              "Frontal: 3x 120mm (opcional)",
-              "Superior: 2x 120mm (opcional)",
-              "Trasero: 1x 120mm (incluido)",
-            ],
-            watherCooler: [
-              "Trasera: 120mm (Opcional)",
-              "Frontal: 240mm (Opcional)",
-            ],
-            discsSlots: ["3.5'' HDD  x 2", "2.5'' SSD x 2"],
-            expension: "x7",
-            motherBoardType: "ATX, MicroATX, ITX",
-            source: [
-              "Fuente 500W (incluida)",
-
-              "Conector ATX 20/24-pin x1 ",
-              "Conector 4-pin CPU x1",
-              "  Conector IDE x2 ",
-              " Conector SATA  x3",
-              " Cable Alimentación: 1.2m ",
-            ],
-            cpuRefriger: "165mm máx.",
-            graphicCard: "320mm máx",
-          },
-
-          caracteristics: [
-            {
-              firstCharacteristic: "Diseño limpio y cuidado. ",
-              firstCaracteristicInfo:
-                "empest Work llama la atención visualmente, por su diseño limpio y estética cuidada. Una torre para dar estilo y transmitir profesionalidad en tu entorno de trabajo, o donde la vayas a utilizar. Su lateral transparente de metacrilato y el borde superior del frontal redondeado, hacen de esta torre un modelo con personalidad. ",
-              secondCaracteristic: "Conexiones sencillas.",
-              secondCaracteristicInfo:
-                "Conecta todos tus periféricos de manera sencilla y rápida, gracias a las conexiones disponibles en la parte frontal de su panel superior. Work dispone de dos puertos 2.0, un puerto 3.0 y sonido HD, todas las necesarias para conectar los periféricos más utilizados.",
-              thirdCaracteristic: "Ventilación optimizada. ",
-              thirdCaracteristicInfo:
-                "Esta torre cuenta con un ventilador trasero preinstalado pero, puedes incluir hasta 5 más, en su frontal y panel superior y, también acepta refrigeraciones líquidas. A su vez, gracias a las rejillas tanto superiores como laterales, la torre mantendrá una temperatura estable, evitando sobrecalentamientos, permitiendo  un rendimiento perfecto para hacer todo aquello que te propongas. ",
-              forthCaracteristic: "",
-            },
-          ],
-        },
-      ],
+      category:"Ram",
+      name :"Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+      slug: "Kingston-FURY-Beast-DDR4-3200-MHz-16GB-2x8GB-CL16",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/43/432664/1392-kingston-fury-beast-ddr4-3200-mhz-16gb-2x8gb-cl16.jpg",
+          price:"42",
+          countInStock:15,
+          brand: "Kingston ",
+          rating:3.5,
+          numReviews:7,
+          description:"La memoria para PC FURY Beast DDR4 de Kingston ofrece un potente aumento de rendimiento para juegos, edición de vídeo y renderización con velocidades de hasta 3733 MHz. Esta rentable actualización está disponible en velocidades de 2666 MHz a 3733 MHz, con latencias de CL15 a 19, capacidades de 4 GB a 32 GB en módulos individuales y de 8 GB a 128 GB en kits. Su overclocking automático Plug N Play a velocidades de 2666 MHz está disponible en Intel XMP y Ryzen. El módulo FURY Beast DDR4 se mantiene fresco gracias a su elegante y delgado disipador de calor. Probada al 100% y garantizada de por vida, esta actualización es muy fácil y sin problemas para tu sistema Intel o AMD.",
+            
     },
+    {
+      category:"Ram",
+      name :"Kingston FURY Beast DDR4 3200 MHz 8GB CL16",
+      slug: "Kingston-FURY-Beast-DDR4-3200-MHz-8GB-CL16",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/43/432662/1958-kingston-fury-beast-ddr4-3200-mhz-8gb-cl16.jpg",
+          price:"40",
+          countInStock:5,
+          brand: "Kingston",
+          rating:4,
+          numReviews:10,
+          description:"La memoria FURY Beast DDR4 de Kingston es la elección perfecta para los desarrolladores de sistemas y para quienes buscan una actualización para regenerar un sistema lento. La memoria DDR4 FURY Beast de Kingston, que ofrece una actualización Plug N Play sencilla y fácil, hará un overclocking automático a la velocidad más alta permitida por el BIOS de tu sistema (hasta 2666 MHz).",
+            
+    },
+    {
+      category:"Towers",
+      name :"Tempest Spectra RGB Torre ATX Blanca",
+      slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
+          price:"60",
+          countInStock:15,
+          brand: "Tempest",
+          rating:3,
+          numReviews:15,
+          description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
+            
+    },
+    {
+      category:"Towers",
+      name :"Tempest Spectra RGB Torre ATX Blanca",
+      slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
+          price:"60",
+          countInStock:15,
+          brand: "Tempest",
+          rating:3,
+          numReviews:15,
+          description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
+            
+    },
+    {
+      category:"Towers",
+      name :"MSI MAG FORGE M100R Cristal Templado USB 3.2 ARGB Negra",
+      slug: "MSI-MAG-FORGE-M100R-Cristal-Templado-USB-3.2-ARGB-Negra",
+          image:"//thumb.pccomponentes.com/w-530-530/articles/1040/10405218/1401-msi-mag-forge-m100r-cristal-templado-usb-32-argb-negra.jpg",
+          price:"80",
+          countInStock:15,
+          brand: "Msi",
+          rating:4.5,
+          numReviews:10,
+          description:"La nueva MSI M100R puede incorporar hasta 6 ventiladores de sistema, proporcionando ventilación y rendimiento estable a todo el sistema. Además, con su panel lateral de cristal templado podrás ver el interior de tu configuración gaming y disfrutar con los efectos ARGB de sus ventiladores incorporados pulsando un solo botón. ",
+            
+    },
+    
+   
   ],
 };
 export default data;
