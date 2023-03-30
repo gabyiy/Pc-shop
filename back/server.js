@@ -4,12 +4,28 @@ import data from "./data.js";
 const app = express();
 
 app.get("/api/products", (req, res) => {
-  res.send(data);
+  if(data){
+  res.send(data.products);
+  }else {
+    res.status(404).send({message:"Products not found"})
+  }
 });
-app.get('/api/products/category/:category',(req,res)=>{
-  const memories = data.products.find(x=>x.category===req.params.category)
-  if(memories)
-  res.send(memories)
+
+app.get("/api/product/slug/:slug",(req,res)=>{
+  const product =data.products.find((x)=>x.slug===req.params.slug)
+  if(product){
+  res.send(product)
+  }else{
+    res.status(404).send({message:"PRoduct not found"})
+  }
+})
+app.get("/api/product/:id",(req,res)=>{
+  const product =data.products.find((x)=>x._id===req.params.id)
+  if(product){
+  res.send(product)
+  }else{
+    res.status(404).send({message:"Product not found"})
+  }
 })
 const port = process.env.PORT || 5000;
 

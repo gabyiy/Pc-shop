@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import Search from "../search/Search";
 import "./Header.css";
 import { useMediaQuery } from "react-responsive";
@@ -7,6 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Badge from "react-bootstrap/Badge";
 import data from "../data";
 import axios from "axios";
+import { Store } from "../../Store";
 
 const reducer =(state,action)=>{
   switch(action.type){
@@ -23,6 +24,11 @@ const reducer =(state,action)=>{
 
 
 const Header = () => {
+
+  const {state}= useContext(Store)
+
+  const {cart}= state
+
   const [ uniqueProducts,setUniqueProducts]= useState([])
 const [unique,setUnique]=useState([])
 const [{loading, error,products},dispatch]=useReducer(reducer,{
@@ -68,9 +74,11 @@ const [{loading, error,products},dispatch]=useReducer(reducer,{
 
 
 useEffect(()=>{
- setUniqueProducts (products.products)
+ setUniqueProducts (products)
 
 },[loading])
+
+console.log(cart.cartItems)
 
   return (
     <div>
@@ -83,11 +91,14 @@ useEffect(()=>{
           ""
         )}
         <div className="title-and-img">
+        <Link to="/">
+
           <img
             className="logo-img"
             src="https://www.shutterstock.com/image-photo/computer-hardware-configuration-laid-out-600w-1915366039.jpg"
             alt="logo"
           />
+          </Link>
           <div>
             <div className="pc">Pc</div>
             <div className="parts">Parts</div>
@@ -97,9 +108,16 @@ useEffect(()=>{
         <div className="account-cart-comitment">
           <div className="details">Comintments</div>
           <div className="details">My account</div>
+          <Link to="/cart">
+
           <div className="details">
-            My Cart <Badge bg="danger">9</Badge>
+            My Cart
+            {cart.cartItems.length> 0 &&
+                         <Badge pill bg="danger">{cart.cartItems.reduce((a,c)=>a + c.quantity,0)}</Badge>
+
+          }
           </div>
+          </Link>
         </div>
       </div>
       <div>{view1 ? <Search view={view1} /> : ""}</div>

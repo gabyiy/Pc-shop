@@ -1,10 +1,11 @@
 const data = {
   products: [
     {
+      _id:"1",
       category:"Ram",
       name :"Corsair Vengeance LPX DDR4 3200 PC4-25600 16GB 2X8GB CL16 Negro",
       slug: "Corsair-Vengeance-LPX DDR4-3200-PC4-25600-16GB-2X8GB-CL16-Negro",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
           price:"50",
           countInStock:20,
           brand: "Corsair",
@@ -14,10 +15,11 @@ const data = {
             
     },
     {
+      _id:"2",
       category:"Ram",
       name :"Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
       slug: "Corsair-Vengeance-LPX-DDR4-3200MHz-PC4-25600-32GB-2x16GB-CL16",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/26/262822/corsair-vengeance-lpx-ddr4-3200-pc4-25600-16gb-2x8gb-cl16-negro.jpg",
           price:"90",
           countInStock:10,
           brand: "Corsair",
@@ -27,10 +29,11 @@ const data = {
             
     },
     {
+      _od:"3",
       category:"Ram",
       name :"Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       slug: "Kingston-FURY-Beast-DDR4-3200-MHz-16GB-2x8GB-CL16",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/43/432664/1392-kingston-fury-beast-ddr4-3200-mhz-16gb-2x8gb-cl16.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/43/432664/1392-kingston-fury-beast-ddr4-3200-mhz-16gb-2x8gb-cl16.jpg",
           price:"42",
           countInStock:15,
           brand: "Kingston ",
@@ -40,10 +43,11 @@ const data = {
             
     },
     {
+      _id:"4",
       category:"Ram",
       name :"Kingston FURY Beast DDR4 3200 MHz 8GB CL16",
       slug: "Kingston-FURY-Beast-DDR4-3200-MHz-8GB-CL16",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/43/432662/1958-kingston-fury-beast-ddr4-3200-mhz-8gb-cl16.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/43/432662/1958-kingston-fury-beast-ddr4-3200-mhz-8gb-cl16.jpg",
           price:"40",
           countInStock:5,
           brand: "Kingston",
@@ -53,10 +57,25 @@ const data = {
             
     },
     {
+      _id:"5",
       category:"Towers",
       name :"Tempest Spectra RGB Torre ATX Blanca",
       slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
+          price:"60",
+          countInStock:15,
+          brand: "Tempest",
+          rating:3,
+          numReviews:15,  
+          description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
+            
+    },
+    {
+      _id:"6",
+      category:"Towers",
+      name :"Tempest Spectra RGB Torre ATX Blanca",
+      slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
           price:"60",
           countInStock:15,
           brand: "Tempest",
@@ -66,23 +85,11 @@ const data = {
             
     },
     {
-      category:"Towers",
-      name :"Tempest Spectra RGB Torre ATX Blanca",
-      slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
-          price:"60",
-          countInStock:15,
-          brand: "Tempest",
-          rating:3,
-          numReviews:15,
-          description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
-            
-    },
-    {
+_id:"7",
       category:"Towers",
       name :"MSI MAG FORGE M100R Cristal Templado USB 3.2 ARGB Negra",
       slug: "MSI-MAG-FORGE-M100R-Cristal-Templado-USB-3.2-ARGB-Negra",
-          image:"//thumb.pccomponentes.com/w-530-530/articles/1040/10405218/1401-msi-mag-forge-m100r-cristal-templado-usb-32-argb-negra.jpg",
+          image:"https://thumb.pccomponentes.com/w-530-530/articles/1040/10405218/1401-msi-mag-forge-m100r-cristal-templado-usb-32-argb-negra.jpg",
           price:"80",
           countInStock:15,
           brand: "Msi",

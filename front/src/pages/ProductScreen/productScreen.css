@@ -1,0 +1,16 @@
+.product-main-div{
+    display: flex;
+    width: 400px;
+    height: 300px;
+}
+.img-product{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.img-product img{
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+}

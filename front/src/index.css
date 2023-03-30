@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.rating span{
+  color:#ffc000
+}
+.btn-primary{
+  background-color: #f0c040;
+}

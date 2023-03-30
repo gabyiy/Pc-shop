@@ -1,3 +1,4 @@
+import { Rating } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -19,15 +20,14 @@ const [types,setTypes]= useState([])
     fetchData()
 
   },[])
+ // console.log(category)
   // const ramTypes = Object.values(types);
-console.log(types)
   return <div>
-   {/* <p>{category}</p> */}
-   {/* {types.map((type)=>(
-<p>{type.name}</p>
-   ))} */}
-  <p>{types.name}</p>
-
+  <div>  <p>{types.name}</p>
+</div>
+<div>
+  <Rating rating={types.rating} numReviews={types.numReviews}/>
+</div>
   </div>;
 };
 
