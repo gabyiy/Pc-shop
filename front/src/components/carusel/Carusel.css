@@ -1,3 +1,5 @@
+.carusel{
+}
 .caruselPageDiv {
   justify-content: center;
   margin-bottom: 30px;
@@ -8,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .slider-div{
   display: block;

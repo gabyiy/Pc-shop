@@ -19,6 +19,8 @@ import NextBtn from "../prevNextBtn/NextBtn";
 
 const Carusel = (props) => {
 
+
+  const [product,setProduct]=useState([])
   const sliderRef = useRef(null);
  const {state,dispatch:ctxDispath}=useContext(Store)
 const {cart}=state
@@ -33,26 +35,28 @@ useEffect(()=>{
  const addToCartHandler=async()=>{
   const existItem=cart.cartItems.find((x)=>x._id===props.product._id)
   const quantity = existItem? existItem.quantity+1 :1
-  const {data}= await axios.get(`/api/product/${props.product._id}`)
+  const {data}= await axios.get(`/api/product/$currentProduct}`)
   if(data.countInStock<quantity){
     window.alert("Sorry product out of stock")
   }
  ctxDispath({type:"CART_ADD_ITEM", payload:{...props.product,quantity}})
  }
 
- 
+ useEffect(()=>{
+setProduct(Object.values( props.product))
+ },[props.product])
   return (
-    <div>
+    <div >
       {props.loading?<div><LoadingBox/></div>: props.error?<div><MessageBox>{props.error}</MessageBox></div>:
 
 
-
-       <Slider        prevArrow={<PrevBtn/>}
+     
+       <Slider        prevArrow={<PrevBtn/>} 	infinite={ props.length > 4}
           nextArrow={<NextBtn/> }    ref={sliderRef} slidesToShow={props.showScroll} slidesToScroll={props.showScroll} rows={props.showRows} speed={500} dots={true} class="slider"> 
-
-{props.products.map((product) => (
+ 
   <div>
-              <div className="main-carusel-map">
+    {product.map((product)=>(
+              <div className="">
               <Link to={`/product/prod/${product.slug}`}>
 
                 <div className="img-caruel-container">
@@ -71,15 +75,15 @@ useEffect(()=>{
                   <div>
             <Rating rating={product.rating} numReviews={product.numReviews}/>
           </div>
-          {product.countInStock >0 &&
+          {props.product.countInStock >0 &&
           <div>
-            <button onClick={setCurrentProduct(product._id)}variant="primary" className='btn-primary'>Add to cart</button>
+            <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
             </div>
         }
                   </div>
                 </div>
+                ))}
             </div>
-          ))}
               
         
 </Slider>

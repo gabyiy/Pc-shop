@@ -1,3 +1,96 @@
 .main {
  
 }
+.caruselPageDiv {
+    justify-content: center;
+    margin-bottom: 30px;
+    display: flex;
+    
+  }
+  .main-carusel-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .slider-div{
+    display: block;
+    flex-direction: column;
+    max-width: auto;
+    /* width: auto !important; */
+    justify-content: center;
+    align-items: center;
+    }
+    .mainSliderDiv {
+      display: flex;
+      justify-content: space-around;
+      margin-right: 10px;
+      width: auto;
+      height: 1rem;
+    }
+    
+    .img-carusel-container{
+      display: grid;
+      width: 150px;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    
+     
+    }
+    .img-carusel{
+      height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    }
+    .img-carusels{
+      object-fit: contain;
+      width: 150px;
+    }
+    .price-div-carusel{
+      font-size: 20px;
+      font-weight: 700;
+      color: red;
+    }
+  
+    .buttonsCaruselDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .buttonCaruselPrev {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 30px;
+      border: 1px solid #a9a9a9;
+      margin-right: 10px;
+    }
+    
+    .buttonCaruselPrev:hover {
+      box-shadow: 0 1px 3px;
+    }
+    
+    .buttonCaruselNext {
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      border: 1px solid #a9a9a9;
+      cursor: pointer;
+    }
+    
+    .buttonCaruselNext:hover {
+      box-shadow: 0 1px 3px;
+    }
+    .slick-prev::before,
+    .slick-next::before{
+      display: none;
+  }
