@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import SearchPage from "./pages/searchPage/SearchPage";
 import ProductsScreen from "./pages/productsScreen/ProductsScreen";
 import ProductScreen from "./pages/ProductScreen/ProductScreen";
+import Container  from "react-bootstrap/Container"
 function App() {
   return (
     <BrowserRouter>

@@ -29,7 +29,7 @@ const data = {
             
     },
     {
-      _od:"3",
+      _id:"3",
       category:"Ram",
       name :"Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       slug: "Kingston-FURY-Beast-DDR4-3200-MHz-16GB-2x8GB-CL16",

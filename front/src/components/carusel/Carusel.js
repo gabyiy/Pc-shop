@@ -14,6 +14,7 @@ import { Store } from "../../Store";
 import axios from "axios";
 import PrevBtn from "../prevNextBtn/PrevBtn";
 import NextBtn from "../prevNextBtn/NextBtn";
+import AddProductButton from "../addProductButton/AddProductButton";
 
 
 
@@ -24,8 +25,6 @@ const Carusel = (props) => {
   const sliderRef = useRef(null);
  const {state,dispatch:ctxDispath}=useContext(Store)
 const {cart}=state
-
-
 
 const [currentProduct,setCurrentProduct]=useState()
 
@@ -42,53 +41,80 @@ useEffect(()=>{
  ctxDispath({type:"CART_ADD_ITEM", payload:{...props.product,quantity}})
  }
 
- useEffect(()=>{
-setProduct(Object.values( props.product))
- },[props.product])
+//  useEffect(()=>{
+// setProduct(Object.values( props.product))
+//  },[props.product])
   return (
     <div >
       {props.loading?<div><LoadingBox/></div>: props.error?<div><MessageBox>{props.error}</MessageBox></div>:
-
-
+<div className="slider-div">
      
-       <Slider        prevArrow={<PrevBtn/>} 	infinite={ props.length > 4}
+       <Slider        prevArrow={<PrevBtn/>} 	infinite={ product.length > 4}
           nextArrow={<NextBtn/> }    ref={sliderRef} slidesToShow={props.showScroll} slidesToScroll={props.showScroll} rows={props.showRows} speed={500} dots={true} class="slider"> 
- 
+ {props.products.map((product)=>(
+
+  // <div className="map-slider-div">
+    
+  //             <Link to={`/product/prod/${product.slug}`}>
+
+  //               <div className="img-caruel-container">
+  //                 <img className="img-carusel" src={product.image} alt="img" />
+  //               </div>
+  //               <div className="carsuelRecipeName">
+  //                 <p className="pName">{product.name}</p>
+  //                 <div>
+  //                   <p>{product.price} e</p>
+
+  //                 </div>
+  //                 </div>
+  //                 </Link>
+
+  //                 <div>
+  //                 <div>
+  //           <Rating rating={product.rating} numReviews={product.numReviews}/>
+  //         </div>
+  //         {product.countInStock >0 &&
+  //         <div>
+  //           <AddProductButton productSlug={product.slug} productId={product._id}/>
+  //           </div>
+  //       }
+  //                 </div>
+  //           </div>
+
   <div>
-    {product.map((product)=>(
-              <div className="">
-              <Link to={`/product/prod/${product.slug}`}>
-
-                <div className="img-caruel-container">
-                  <img className="img-carusel" src={product.image} alt="img" />
-                </div>
-                <div className="carsuelRecipeName">
-                  <p className="pName">{product.name}</p>
-                  <div>
-                    <p>{product.price} e</p>
-
-                  </div>
-                  </div>
-                  </Link>
-
-                  <div>
-                  <div>
-            <Rating rating={product.rating} numReviews={product.numReviews}/>
+       <div>
+            <h3>1</h3>
           </div>
-          {props.product.countInStock >0 &&
           <div>
-            <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
-            </div>
-        }
-                  </div>
-                </div>
-                ))}
-            </div>
-              
-        
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+          <div>
+            <h3>7</h3>
+          </div>
+          <div>
+            <h3>8</h3>
+          </div>
+          <div>
+            <h3>9</h3>
+          </div>
+  </div>
+))}
+
 </Slider>
 
-
+  </div>
 }
 
 

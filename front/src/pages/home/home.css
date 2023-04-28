@@ -13,14 +13,14 @@
     align-items: center;
     flex-direction: column;
   }
-  .slider-div{
+  /* .slider-div{
     display: block;
     flex-direction: column;
     max-width: auto;
-    /* width: auto !important; */
+    /* width: auto !important; 
     justify-content: center;
     align-items: center;
-    }
+    } */
     .mainSliderDiv {
       display: flex;
       justify-content: space-around;
@@ -42,6 +42,7 @@
     object-fit: contain;
     border-radius: 10px;
     }
+
     .img-carusels{
       object-fit: contain;
       width: 150px;
@@ -93,4 +94,8 @@
     .slick-prev::before,
     .slick-next::before{
       display: none;
+  }
+
+  .slider-main{
+    display: flex;
   }

@@ -6,19 +6,27 @@
   display: flex;
   
 }
-.main-carusel-map{
-  display: flex;
+.slider-div{
+
+}
+.map-slider-div{
+
   justify-content: center;
   align-items: center;
 }
-.slider-div{
+/* .main-carusel-map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .slider-div{
   display: block;
   flex-direction: column;
   max-width: auto;
-  /* width: auto !important; */
+  /* width: auto !important; 
   justify-content: center;
   align-items: center;
-  }
+  } */
   .mainSliderDiv {
     display: flex;
     justify-content: space-around;
@@ -87,3 +95,4 @@
   .slick-next::before{
     display: none;
 }
+

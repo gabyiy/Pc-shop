@@ -9,6 +9,7 @@ import Rating from '../../components/rating/Rating';
 import { getError } from '../../components/utils';
 import { Store } from '../../Store';
 import "./productScreen.css"
+import AddProductButton from '../../components/addProductButton/AddProductButton';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -103,7 +104,8 @@ const {cart}= state
           </div>
           {product.countInStock >0 &&
           <div>
-            <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
+            <AddProductButton productSlug={product.slug} productId={product._id}/>
+
             </div>
         }
           </div>

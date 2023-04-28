@@ -17,6 +17,7 @@ import { Store } from "../../Store";
 import PrevBtn from "../../components/prevNextBtn/PrevBtn";
 import NextBtn from "../../components/prevNextBtn/NextBtn";
 import ProductCarusel from "../../components/productsCarusel/ProductCarusel";
+import Row from "react-bootstrap/Row"
 
 
 const reducer = (state,action)=>{
@@ -102,53 +103,18 @@ setProduct(prod)
       <Helmet><title>Componentes PC</title></Helmet>
       <Header />
       {/* <div className="main"> */}
-{loading?<div><LoadingBox/></div>:error?<div><MessageBox variant="danger">{error}</MessageBox></div>:<div className="">
-{/* {products.map((product)=>(
-  // <ProductCarusel product={product}/>
-  ))} */}
+{loading?<div><LoadingBox/></div>:error?<div><MessageBox variant="danger">{error}</MessageBox></div>:
+<div>
+ {/* {products.map((product)=>( */}
 
-<Carusel  product={product} showRows={showRows} showScroll={showScroll} slideRef={slideRef} error={error} loading={loading}/>
-{/* <Slider infinite={ products.length > 4}  prevArrow={<PrevBtn/>}
-          nextArrow={<NextBtn/> }    ref={slideRef} slidesToShow={showScroll} slidesToScroll={showScroll} rows={showRows} speed={500} dots={true} class="slider">
-  {products.map((product) => (
-  <div>
-              {/* <div className="main-carusel-map">
-              <Link to={`/product/prod/${product.slug}`}>
+<Carusel  products={products} showRows={showRows} showScroll={showScroll} slideRef={slideRef} error={error} loading={loading}/>
+  {/* ))}  */}
+<Row> 
+  </Row>
 
-                <div className="img-caruel-container">
-                  <img className="img-carusel" src={product.image} alt="img" />
-                </div>
-                <div className="carsuelRecipeName">
-                  <p className="pName">{product.name}</p>
-                  <div>
-                    <p>{product.price} e</p>
 
-                  </div>
-                  </div>
-                  </Link>
 
-                  <div>
-                  <div>
-            <Rating rating={product.rating} numReviews={product.numReviews}/>
-          </div>
-          {product.countInStock >0 &&
-          <div>
-            <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
-            </div>
-        }
-                  </div>
-                </div> */}
-                {/* <div>
-                  <div className="img-caruel-container">
-                    <img className="img-carusels"  src={product.image} alt="img"/>
-                  </div>
-                </div>
-            </div>
-          ))}
-  </Slider>  */}
-
-  </div>}
-      {/* </div> */}
+ </div> }
 
     </div>
   );
