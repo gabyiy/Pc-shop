@@ -131,7 +131,7 @@ const data = {
                 "Conecta todos tus periféricos de manera sencilla y rápida, gracias a las conexiones disponibles en la parte frontal de su panel superior. Work dispone de dos puertos 2.0, un puerto 3.0 y sonido HD, todas las necesarias para conectar los periféricos más utilizados.",
               thirdCaracteristic: "Ventilación optimizada. ",
               thirdCaracteristicInfo:
-                "Esta torre cuenta con un ventilador trasero preinstalado pero, puedes incluir hasta 5 más, en su frontal y panel superior y, también acepta refrigeraciones líquidas. A su vez, gracias a las rejillas tanto superiores como laterales, la torre mantendrá una temperatura estable, evitando sobrecalentamientos, permitiendo  un rendimiento perfecto para hacer todo aquello que te propongas. ",
+                "Esta torre cuenta con un xventilador trasero preinstalado pero, puedes incluir hasta 5 más, en su frontal y panel superior y, también acepta refrigeraciones líquidas. A su vez, gracias a las rejillas tanto superiores como laterales, la torre mantendrá una temperatura estable, evitando sobrecalentamientos, permitiendo  un rendimiento perfecto para hacer todo aquello que te propongas. ",
               forthCaracteristic: "",
             },
           ],
