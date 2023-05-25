@@ -26,24 +26,9 @@ const Carusel = (props) => {
  const {state,dispatch:ctxDispath}=useContext(Store)
 const {cart}=state
 
-const [currentProduct,setCurrentProduct]=useState()
 
-useEffect(()=>{
-  setCurrentProduct()
-},[])
- const addToCartHandler=async()=>{
-  const existItem=cart.cartItems.find((x)=>x._id===props.product._id)
-  const quantity = existItem? existItem.quantity+1 :1
-  const {data}= await axios.get(`/api/product/$currentProduct}`)
-  if(data.countInStock<quantity){
-    window.alert("Sorry product out of stock")
-  }
- ctxDispath({type:"CART_ADD_ITEM", payload:{...props.product,quantity}})
- }
 
-//  useEffect(()=>{
-// setProduct(Object.values( props.product))
-//  },[props.product])
+
   return (
     <div >
       {props.loading?<div><LoadingBox/></div>: props.error?<div><MessageBox>{props.error}</MessageBox></div>:
@@ -53,63 +38,63 @@ useEffect(()=>{
           nextArrow={<NextBtn/> }    ref={sliderRef} slidesToShow={props.showScroll} slidesToScroll={props.showScroll} rows={props.showRows} speed={500} dots={true} class="slider"> 
  {props.products.map((product)=>(
 
-  // <div className="map-slider-div">
+  <div className="map-slider-div">
     
-  //             <Link to={`/product/prod/${product.slug}`}>
+              <Link to={`/product/prod/${product.slug}`}>
 
-  //               <div className="img-caruel-container">
-  //                 <img className="img-carusel" src={product.image} alt="img" />
-  //               </div>
-  //               <div className="carsuelRecipeName">
-  //                 <p className="pName">{product.name}</p>
-  //                 <div>
-  //                   <p>{product.price} e</p>
+                <div className="img-caruel-container">
+                  <img className="img-carusel" src={product.image} alt="img" />
+                </div>
+                <div className="carsuelRecipeName">
+                  <p className="pName">{product.name}</p>
+                  <div>
+                    <p>{product.price} e</p>
 
-  //                 </div>
-  //                 </div>
-  //                 </Link>
+                  </div>
+                  </div>
+                  </Link>
 
-  //                 <div>
-  //                 <div>
-  //           <Rating rating={product.rating} numReviews={product.numReviews}/>
+                  <div>
+                  <div>
+            <Rating rating={product.rating} numReviews={product.numReviews}/>
+          </div>
+          {product.countInStock >0 &&
+          <div>
+            <AddProductButton productSlug={product.slug} productId={product._id} productCountInStock={product.countInStock}/>
+            </div>
+        }
+                  </div>
+            </div>
+
+  // <div style={{margin:"30px"}}>
+  //      <div>
+  //           <h3>1</h3>
   //         </div>
-  //         {product.countInStock >0 &&
   //         <div>
-  //           <AddProductButton productSlug={product.slug} productId={product._id}/>
-  //           </div>
-  //       }
-  //                 </div>
-  //           </div>
-
-  <div>
-       <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-  </div>
+  //           <h3>2</h3>
+  //         </div>
+  //         <div>
+  //           <h3>3</h3>
+  //         </div>
+  //         <div>
+  //           <h3>4</h3>
+  //         </div>
+  //         <div>
+  //           <h3>5</h3>
+  //         </div>
+  //         <div>
+  //           <h3>6</h3>
+  //         </div>
+  //         <div>
+  //           <h3>7</h3>
+  //         </div>
+  //         <div>
+  //           <h3>8</h3>
+  //         </div>
+  //         <div>
+  //           <h3>9</h3>
+  //         </div>
+  // </div>
 ))}
 
 </Slider>

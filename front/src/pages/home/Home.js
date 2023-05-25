@@ -102,15 +102,10 @@ setProduct(prod)
     <div>
       <Helmet><title>Componentes PC</title></Helmet>
       <Header />
-      {/* <div className="main"> */}
 {loading?<div><LoadingBox/></div>:error?<div><MessageBox variant="danger">{error}</MessageBox></div>:
 <div>
- {/* {products.map((product)=>( */}
 
 <Carusel  products={products} showRows={showRows} showScroll={showScroll} slideRef={slideRef} error={error} loading={loading}/>
-  {/* ))}  */}
-<Row> 
-  </Row>
 
 
 

@@ -108,7 +108,7 @@ console.log(cart.cartItems)
         <div className="account-cart-comitment">
           <div className="details">Comintments</div>
           <div className="details">My account</div>
-          <Link to="/cart">
+          <Link to="/cartScreen">
 
           <div className="details">
             My Cart

@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id:"1",
+    //  _id:"1",
       category:"Ram",
       name :"Corsair Vengeance LPX DDR4 3200 PC4-25600 16GB 2X8GB CL16 Negro",
       slug: "Corsair-Vengeance-LPX DDR4-3200-PC4-25600-16GB-2X8GB-CL16-Negro",
@@ -15,7 +15,7 @@ const data = {
             
     },
     {
-      _id:"2",
+   //   _id:"2",
       category:"Ram",
       name :"Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
       slug: "Corsair-Vengeance-LPX-DDR4-3200MHz-PC4-25600-32GB-2x16GB-CL16",
@@ -29,7 +29,7 @@ const data = {
             
     },
     {
-      _id:"3",
+  //    _id:"3",
       category:"Ram",
       name :"Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       slug: "Kingston-FURY-Beast-DDR4-3200-MHz-16GB-2x8GB-CL16",
@@ -43,7 +43,7 @@ const data = {
             
     },
     {
-      _id:"4",
+  //    _id:"4",
       category:"Ram",
       name :"Kingston FURY Beast DDR4 3200 MHz 8GB CL16",
       slug: "Kingston-FURY-Beast-DDR4-3200-MHz-8GB-CL16",
@@ -57,7 +57,7 @@ const data = {
             
     },
     {
-      _id:"5",
+    //  _id:"5",
       category:"Towers",
       name :"Tempest Spectra RGB Torre ATX Blanca",
       slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
@@ -70,22 +70,9 @@ const data = {
           description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
             
     },
+   
     {
-      _id:"6",
-      category:"Towers",
-      name :"Tempest Spectra RGB Torre ATX Blanca",
-      slug: "Tempest-Spectra-RGB-Torre-ATX-Blanca",
-          image:"https://thumb.pccomponentes.com/w-530-530/articles/22/222326/photo-3.jpg",
-          price:"60",
-          countInStock:15,
-          brand: "Tempest",
-          rating:3,
-          numReviews:15,
-          description:"Tempest expande su familia de torres, lanzando la versión blanca de su éxito de ventas: Tempest Spectra RGB, una caja modelo ATX con efectos de retroiluminación tanto en el frontal como en su ventilador trasero que hará las delicias tanto de aquellos que acaban de llegar al mundo gaming como de los harcore gamers.",
-            
-    },
-    {
-_id:"7",
+//_id:"7",
       category:"Towers",
       name :"MSI MAG FORGE M100R Cristal Templado USB 3.2 ARGB Negra",
       slug: "MSI-MAG-FORGE-M100R-Cristal-Templado-USB-3.2-ARGB-Negra",

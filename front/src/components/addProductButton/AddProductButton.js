@@ -1,7 +1,8 @@
-import React,{useContext,useReducer,useEffect} from 'react'
+import React,{useContext,useReducer,useEffect, useState} from 'react'
 import { Store } from '../../Store';
 import axios from 'axios';
 import { getError } from '../../components/utils';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,8 +19,8 @@ const reducer = (state, action) => {
     }
   };
 const AddProductButton = (props) => {
-
     const {state, dispatch:ctxDispatch}=useContext(Store)
+    const [stock,setStock]=useState(true)
 
 const {cart}= state
 
@@ -51,16 +52,24 @@ const {cart}= state
         const {data}= await axios.get(`/api/product/${props.productId}`)
         if(data.countInStock<quantity){
           window.alert("Sorry product out of stock")
+          setStock(false)
+        }else{
+          setStock(true)
         }
         ctxDispatch({
           type: 'CART_ADD_ITEM',
           payload: { ...product, quantity},
         });
+        console.log(product.quantity)
       };
   return (
     <div>
-                  <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
-
+      {
+         stock ?
+                           <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add Product</button>
+:
+        <button variant="light" disabled>Out of stock</button>
+      }
     </div>
   )
 }

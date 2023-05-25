@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useParams } from 'react-router-dom';
+import {   useNavigate, useParams } from 'react-router-dom';
 import Header from '../../components/header/Header';
 import LoadingBox from '../../components/loadingBox/LoadingBox';
 import MessageBox from '../../components/messageBox/MessageBox';
@@ -25,6 +25,7 @@ const reducer = (state, action) => {
 };
 
 const ProductScreen = () => {
+  const navigate = useNavigate()
   const params = useParams();
   const { slug } = params;
 
@@ -54,7 +55,6 @@ const {cart}= state
     fetchData();
   }, [slug]);
 
-
   const addToCartHandler = async() => {
     const existItem=cart.cartItems.find((x)=>x._id===product._id)
     const quantity = existItem? existItem.quantity+1 :1
@@ -66,7 +66,10 @@ const {cart}= state
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity},
     });
+    navigate("/cartScreen")
+    
   };
+
   return (
     <div>
               <Header/>
@@ -104,7 +107,7 @@ const {cart}= state
           </div>
           {product.countInStock >0 &&
           <div>
-            <AddProductButton productSlug={product.slug} productId={product._id}/>
+                  <button onClick={addToCartHandler}variant="primary" className='btn-primary'>Add to cart</button>
 
             </div>
         }

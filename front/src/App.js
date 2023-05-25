@@ -8,6 +8,8 @@ import SearchPage from "./pages/searchPage/SearchPage";
 import ProductsScreen from "./pages/productsScreen/ProductsScreen";
 import ProductScreen from "./pages/ProductScreen/ProductScreen";
 import Container  from "react-bootstrap/Container"
+import CartScreen from "./pages/cartScreen/CartScreen";
+import SignIn from "./pages/signIn/SignIn";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,8 @@ function App() {
           <Route  path="/product/prod/:slug" element={<ProductScreen/>}/>
 
           <Route exact path="/products/:category" element={<ProductsScreen />} />
+          <Route exact path ="/cartScreen" element={<CartScreen/>}/>
+          <Route path="/signIn" element={<SignIn/>}/>
         </Routes>
     </BrowserRouter> 
   );
